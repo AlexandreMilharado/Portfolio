@@ -4,4 +4,53 @@
 @use '../abstracts' as *;
 
 .hero {
+    padding: $space-13 $space-9;
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: $space-8;
+
+        &__main {
+            display: flex;
+            flex-direction: column;
+            gap: $space-4;
+
+            &__name {
+                font-size: $font-size-display-hero;
+                line-height: $line-height-tight;
+            }
+
+            &__role {
+                font-size:      $font-size-xl;
+                color:          $color-text-muted;
+                letter-spacing: $letter-spacing-tight;
+            }
+
+            &__description {
+                font-size:   $font-size-md;
+                line-height: $line-height-normal;
+            }
+        }
+
+        &__secondary {
+            display: flex;
+            flex-direction: column;
+            margin-top: $space-4-5;
+            gap: $space-1;
+            max-width: fit-content;
+
+            &__github,
+            &__linkedin,
+            &__email {
+                display: flex;
+                align-items: center;
+                gap: $space-2;
+                
+                &:hover {
+                    font-weight: $font-weight-semibold;
+                }
+            }
+        }
+    }
 }

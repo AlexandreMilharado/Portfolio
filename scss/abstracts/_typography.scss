@@ -12,7 +12,8 @@ $font-size-lg:       1.8rem;  // 18px
 $font-size-xl:       2.0rem;  // 20px
 $font-size-2xl:      2.4rem;  // 24px
 $font-size-3xl:      3.0rem;  // 30px
-$font-size-display:  clamp(2.25rem, 6vw, 3.5rem); // Fluid display size for hero headings
+$font-size-display:  clamp(2.25rem, 6vw, 3.5rem); // Fluid display size for headings
+$font-size-display-hero: clamp(3.5rem, 6vw, 4.5rem); // Fluid display size for hero headings
 
 // Font Weights
 $font-weight-regular: 400;
@@ -23,6 +24,7 @@ $font-weight-bold:    700;
 // Line Heights
 $line-height-none:   1;
 $line-height-tight:  1.15;
+$line-height-snug:   1.25;
 $line-height-normal: 1.5;
 $line-height-relaxed:1.7;
 

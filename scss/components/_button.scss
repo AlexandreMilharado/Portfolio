@@ -7,10 +7,12 @@
   @extend %button-reset;
 }
 
-.btn-nav {
+.btn-base {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    gap: $space-3;
 
     padding: $space-3 $space-6;
     border-radius: $space-6;

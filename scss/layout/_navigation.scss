@@ -4,17 +4,16 @@
 @use '../abstracts' as *;
 
 .nav {
-    position: fixed;
+    position: sticky;
     top: $space-5;
-    left: $space-5;
-    right: $space-5;
+    margin: 0 $space-5;
+    padding: $space-4-5 $space-8;
     z-index: z(sticky);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: $color-nav-bg;
-    padding: $space-4-5 $space-8;
     font-size: $font-size-md;
 
     @include glass($shadow-drop);
@@ -23,5 +22,14 @@
         @extend %reset-list;
         display: flex;
         gap: $space-9;
-    }    
+    }
+
+    &::after {
+        content: none;
+        font-weight: $font-weight-semibold;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        display: block;
+    }
 }

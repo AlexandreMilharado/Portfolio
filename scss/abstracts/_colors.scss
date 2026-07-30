@@ -17,7 +17,7 @@ $color-bg:            $clr-blue-gray;
 $color-surface:       rgba($clr-white, 0.85); // glassmorphism header bg
 $color-surface-solid: $clr-white;
 $color-text:          $clr-gray-900;
-$color-text-muted:    $clr-gray-500;
+$color-text-muted:    rgba($clr-gray-900, 0.80);
 $color-primary:       $clr-black;
 $color-primary-hover: #1f2937; // dark grey hover
 $color-border:        rgba($clr-black, 0.08);
