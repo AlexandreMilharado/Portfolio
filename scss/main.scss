@@ -1,0 +1,36 @@
+// ==========================================================================
+// Main Entry Point SCSS
+// Architecture style: ITCSS & 7-1 Sass Pattern (Modern Dart Sass @use)
+// ==========================================================================
+
+// 1. ABSTRACTS (Exposes functions, mixins, variables and placeholders)
+@use 'abstracts';
+
+// 2. VENDORS (External library overrides - empty)
+
+// 3. BASE (Reset and global styles)
+@use 'base/reset';
+@use 'base/base';
+@use 'base/utilities';
+@use 'base/animations';
+
+// 4. LAYOUT (Structural layouts)
+@use 'layout/container';
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/navigation';
+@use 'layout/section';
+@use 'layout/footer';
+
+// 5. COMPONENTS (Discrete, reusable widgets)
+@use 'components/button';
+@use 'components/icon';
+@use 'components/social-link';
+@use 'components/card';
+@use 'components/divider';
+
+// 6. PAGES (Page-specific overrides)
+@use 'pages/home';
+
+// 7. THEMES (Color-scheme overrides)
+@use 'themes/default';

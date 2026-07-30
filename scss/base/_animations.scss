@@ -1,0 +1,68 @@
+// SCSS Base - Animations
+// Keyframes and reusable animation tokens for micro-interactions
+
+@use '../abstracts' as *;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineDraw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.anim-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.anim-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+// Fade in on page load for the entire content wrapper
+.js-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.anim-underline {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; // "lower than the text"
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  &.is-active::after,
+  &:hover::after {
+    animation: underlineDraw 0.4s ease-out forwards;
+  }
+}

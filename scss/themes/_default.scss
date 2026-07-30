@@ -1,0 +1,15 @@
+// SCSS Themes - Default Theme
+// Configures defaults for light/default themes
+
+@use '../abstracts' as *;
+
+:root {
+  color-scheme: light;
+  
+  // Expose key SCSS variables to CSS variables for runtime accessibility (e.g. javascript integrations)
+  --color-bg: #{$color-bg};
+  --color-surface: #{$color-surface};
+  --color-text: #{$color-text};
+  --color-primary: #{$color-primary};
+  --color-accent: #{$color-accent};
+}

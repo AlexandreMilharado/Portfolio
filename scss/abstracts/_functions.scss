@@ -1,0 +1,76 @@
+// SCSS Functions
+// Useful helper functions for unit conversion, z-index management, and token mapping
+// Refactored to conform to modern Dart Sass best practices
+
+@use 'sass:math';
+@use 'sass:meta';
+@use 'sass:map';
+@use 'colors' as *;
+@use 'spacing' as *;
+@use 'typography' as *;
+
+// 1. Centralized Z-Index Management
+$z-layers: (
+  'below':    -1,
+  'default':   1,
+  'above':     2,
+  'sticky':    100,
+  'header':    200,
+  'dropdown':  300,
+  'overlay':   500,
+  'modal':     1000
+) !default;
+
+@function z($layer) {
+  @if map.has-key($z-layers, $layer) {
+    @return map.get($z-layers, $layer);
+  }
+  @warn "Unknown z-index layer `#{$layer}`. Please check $z-layers map.";
+  @return null;
+}
+
+// 2. Spacing getter (maps keys to variables)
+$spacing-map: (
+  '1':  $space-1,
+  '2':  $space-2,
+  '3':  $space-3,
+  '4':  $space-4,
+  '5':  $space-5,
+  '6':  $space-6,
+  '7':  $space-7,
+  '8':  $space-8,
+  '9':  $space-9,
+  '10': $space-10,
+  '11': $space-11,
+  '12': $space-12,
+  '13': $space-13
+) !default;
+
+@function spacing($key) {
+  @if map.has-key($spacing-map, $key) {
+    @return map.get($spacing-map, $key);
+  }
+  @warn "Unknown spacing key `#{$key}`. Please check spacing scale.";
+  @return null;
+}
+
+// 3. Color getter
+$color-map: (
+  'bg':            $color-bg,
+  'surface':       $color-surface,
+  'surface-solid': $color-surface-solid,
+  'text':          $color-text,
+  'text-muted':    $color-text-muted,
+  'primary':       $color-primary,
+  'primary-hover': $color-primary-hover,
+  'border':        $color-border,
+  'accent':        $color-accent
+) !default;
+
+@function color($key) {
+  @if map.has-key($color-map, $key) {
+    @return map.get($color-map, $key);
+  }
+  @warn "Unknown color key `#{$key}`. Please check color scale.";
+  @return null;
+}

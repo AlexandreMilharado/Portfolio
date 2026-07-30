@@ -1,0 +1,21 @@
+// SCSS Abstracts - Variables Master File
+// Forwards all token variables for unified imports
+
+@forward 'colors';
+@forward 'spacing';
+@forward 'typography';
+@forward 'breakpoints';
+
+
+// Drop shadow tokens
+$shadow-drop:            0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+$glass-inset-highlight:  inset 0 0.1rem 0 rgba(255, 255, 255, 0.4);
+$glass-inset-shade:      inset 0 -0.1rem 0 rgba(255, 255, 255, 0.05);
+
+
+// Glass tokens
+$glass-bg:        rgba(255, 255, 255, 0.05); // matches Fill panel: FFFFFF 10%
+$glass-blur:      0.6rem;
+$glass-saturate:  150%;
+$glass-border:    rgba(255, 255, 255, 0.785);
+$nav-radius:      3rem; // matches Header Frame corner radius

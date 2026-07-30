@@ -1,0 +1,8 @@
+// SCSS Components - Card
+// Reusable content card container
+
+@use '../abstracts' as *;
+
+.card {
+    @extend %card-reset;
+}

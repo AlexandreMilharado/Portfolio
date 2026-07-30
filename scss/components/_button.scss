@@ -1,0 +1,32 @@
+// SCSS Components - Button
+// Reusable button styles with modifiers and micro-interactions
+
+@use '../abstracts' as *;
+
+.btn {
+  @extend %button-reset;
+}
+
+.btn-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: $space-3 $space-6;
+    border-radius: $space-6;
+    background-color: $color-primary;
+    color: $color-surface-solid;
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+
+    transition: background-color 0.2s ease, transform 0.15s ease;
+
+    &:hover {
+        background-color: $color-primary-hover;
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}

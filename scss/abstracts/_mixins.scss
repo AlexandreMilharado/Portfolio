@@ -1,0 +1,31 @@
+// SCSS Mixins
+// Production-quality mixins for responsiveness, positioning, hover states, and layouts
+// Refactored to use modern Dart Sass map modules
+
+@use 'sass:map';
+@use 'sass:list';
+@use 'breakpoints' as *;
+@use 'spacing' as *;
+@use 'variables' as *;
+
+
+@mixin glass(
+  $extra-shadow: null,
+  $bg: $glass-bg,
+  $blur: $glass-blur,
+  $saturate: $glass-saturate,
+  $border: $glass-border,
+  $radius: $nav-radius
+) {
+  background: $bg;
+  border-radius: $radius;
+  backdrop-filter: blur($blur) saturate($saturate);
+  -webkit-backdrop-filter: blur($blur) saturate($saturate);
+  border: 1px solid $border;
+
+  @if $extra-shadow {
+    box-shadow: $extra-shadow, $glass-inset-highlight, $glass-inset-shade;
+  } @else {
+    box-shadow: $glass-inset-highlight, $glass-inset-shade;
+  }
+}

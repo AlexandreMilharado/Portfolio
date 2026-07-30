@@ -1,0 +1,7 @@
+// SCSS Abstracts - Master Index Forwarder
+// Forwards abstracts modules to make them easily consumable under a single namespace
+
+@forward 'variables';
+@forward 'functions';
+@forward 'mixins';
+@forward 'placeholders';
