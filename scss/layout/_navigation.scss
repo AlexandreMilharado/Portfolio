@@ -4,9 +4,10 @@
 @use '../abstracts' as *;
 
 .nav {
-    position: sticky;
+    position: fixed;
     top: $space-5;
-    margin: 0 $space-5;
+    width: calc(100% - $space-7 - $space-7);
+    margin-left: $space-7;
     padding: $space-4-5 $space-8;
     z-index: z(sticky);
 
