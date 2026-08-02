@@ -2,26 +2,28 @@
 // Production-quality color palette based on mockup
 
 // 1. Brand/Palette Colors (Raw values)
-$clr-black:        #000000;
-$clr-white:        #ffffff;
-$clr-gray-900:     #111827; // main text
-$clr-gray-700:     #374151; // subtitle/headings
-$clr-gray-500:     #6b7280; // muted descriptions
-$clr-gray-200:     #e5e7eb; // borders
-$clr-gray-100:     #f3f4f6; // backgrounds
-$clr-blue-gray:    #f4f6f8; // soft layout bg
-$clr-white-opac:   rgba($clr-white, 0.1); // glassmorphism header bg
+$clr-black: #000000;
+$clr-white: #ffffff;
+$clr-gray-900: #111827; // main text
+$clr-gray-700: #374151; // subtitle/headings
+$clr-gray-500: #6b7280; // muted descriptions
+$clr-gray-200: #e5e7eb; // borders
+$clr-gray-100: #f3f4f6; // backgrounds
+$clr-blue-gray: #f4f6f8; // soft layout bg
+$clr-white-opac: rgba($clr-white, 0.1); // glassmorphism header bg
+$clr-white-opac2: rgba($clr-white, 0.25);
 
 // 2. Semantic Color Mapping
-$color-bg:            $clr-blue-gray;
-$color-surface:       rgba($clr-white, 0.85); // glassmorphism header bg
+$color-bg: $clr-blue-gray;
+$color-surface: rgba($clr-white, 0.85); // glassmorphism header bg
 $color-surface-solid: $clr-white;
-$color-text:          $clr-gray-900;
-$color-text-muted:    rgba($clr-gray-900, 0.80);
-$color-primary:       $clr-black;
+$color-text: $clr-gray-900;
+$color-text-muted: rgba($clr-gray-900, 0.8);
+$color-primary: $clr-black;
 $color-primary-hover: #1f2937; // dark grey hover
-$color-border:        rgba($clr-black, 0.08);
-$color-accent:        #3b82f6; // subtle links or highlights if needed
-$color-shadow:        rgba($clr-black, 0.04);
-$color-nav-bg:        $clr-white-opac;
-$color-nav-link:      $clr-black;
+$color-border: rgba($clr-black, 0.08);
+$color-accent: #3b82f6; // subtle links or highlights if needed
+$color-shadow: rgba($clr-black, 0.04);
+$color-nav-bg: $clr-white-opac;
+$color-nav-link: $clr-black;
+$color-skill-bg: $clr-white-opac;

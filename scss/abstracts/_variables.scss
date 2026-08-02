@@ -14,8 +14,10 @@ $glass-inset-shade:      inset 0 -0.1rem 0 rgba(255, 255, 255, 0.05);
 
 
 // Glass tokens
-$glass-bg:        rgba(255, 255, 255, 0.05); // matches Fill panel: FFFFFF 10%
+$glass-bg:        rgba(255, 255, 255, 0.5); 
+$glass-bg-lighter:rgba(255, 255, 255, 0.457); 
 $glass-blur:      0.6rem;
+$glass-blur-hard: 2rem;
 $glass-saturate:  150%;
 $glass-border:    rgba(255, 255, 255, 0.785);
 $nav-radius:      3rem; // matches Header Frame corner radius

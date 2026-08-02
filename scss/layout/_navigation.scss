@@ -23,6 +23,7 @@
         @extend %reset-list;
         display: flex;
         gap: $space-9;
+        align-items: center;
     }
 
     &::after {

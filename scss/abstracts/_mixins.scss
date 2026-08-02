@@ -20,7 +20,6 @@
   background: $bg;
   border-radius: $radius;
   backdrop-filter: blur($blur) saturate($saturate);
-  -webkit-backdrop-filter: blur($blur) saturate($saturate);
   border: 1px solid $border;
 
   @if $extra-shadow {

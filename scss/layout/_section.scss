@@ -1,59 +1,151 @@
 // SCSS Layout - Section
 // Structural layout sections with consistent vertical padding
 
-@use '../abstracts' as *;
+@use "../abstracts" as *;
+
+.hero-wrapper {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.772) 0%, transparent 30%),
+    url(../../img/background.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
 
 .hero {
-    padding: $space-15 $space-9;
-    background-image: url(../../img/background_1.png);
-    height: 100vh;
-    background-size: cover;
-    position: relative;
-    &__content {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
+
+    &__main {
+      display: flex;
+      flex-direction: column;
+      gap: $space-4;
+
+      &__name {
+        font-size: $font-size-display-hero;
+        line-height: $line-height-tight;
+      }
+
+      &__role {
+        font-size: $font-size-xl;
+        color: $color-text-muted;
+        letter-spacing: $letter-spacing-tight;
+      }
+
+      &__description {
+        font-size: $font-size-md;
+        line-height: $line-height-normal;
+      }
+    }
+
+    &__secondary {
+      display: flex;
+      flex-direction: column;
+      margin-top: $space-4-5;
+      gap: $space-1;
+      max-width: fit-content;
+
+      &__github,
+      &__linkedin,
+      &__email {
+        display: flex;
+        align-items: center;
+        gap: $space-2;
+
+        &:hover {
+          font-weight: $font-weight-semibold;
+        }
+      }
+    }
+  }
+}
+
+.background {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      font-size: $font-size-display;
+      line-height: $line-height-tight;
+      background-color: $glass-border;
+      box-shadow: $shadow-drop, $glass-inset-highlight, $glass-inset-shade;
+      max-height: fit-content;
+      padding: $space-2 $space-9;
+      padding-right: $space-7;
+      border-radius: 0 $space-3 $space-3 0;
+    }
+
+    &__main {
+      @include glass($shadow-drop, $glass-bg-lighter, $glass-blur-hard);
+
+      padding: $space-5 $space-7;
+      font-size: $font-size-md;
+      line-height: $line-height-normal;
+
+      display: flex;
+      flex-direction: column;
+      gap: $space-4-5;
+      width: 60rem;
+
+      &__description {
         display: flex;
         flex-direction: column;
-        gap: $space-8;
+        gap: $space-2;
+        width: fit-content;
+      }
 
-        &__main {
+      &__skills {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: fit-content;
+        padding-top: $space-2;
+        font-size: $font-size-xs;
+        gap: $space-5;
+
+        &__technical {
+          display: flex;
+          flex-direction: column;
+          gap: $space-2;
+          width: 50%;
+
+          ul {
+            @extend %reset-list;
             display: flex;
-            flex-direction: column;
-            gap: $space-4;
+            flex-wrap: wrap;
+            gap: $space-2;
+          }
 
-            &__name {
-                font-size: $font-size-display-hero;
-                line-height: $line-height-tight;
-            }
-
-            &__role {
-                font-size:      $font-size-xl;
-                color:          $color-text-muted;
-                letter-spacing: $letter-spacing-tight;
-            }
-
-            &__description {
-                font-size:   $font-size-md;
-                line-height: $line-height-normal;
-            }
+          li {
+            padding: $space-1 $space-3;
+            border-radius: $space-6;
+            background-color: $color-skill-bg;
+          }
         }
 
-        &__secondary {
-            display: flex;
-            flex-direction: column;
-            margin-top: $space-4-5;
-            gap: $space-1;
-            max-width: fit-content;
+        &__toolkit {
+          display: flex;
+          flex-direction: column;
+          gap: $space-2;
+          width: 50%;
 
-            &__github,
-            &__linkedin,
-            &__email {
-                display: flex;
-                align-items: center;
-                gap: $space-2;
-                
-                &:hover {
-                    font-weight: $font-weight-semibold;
-                }
-            }
+          ul {
+            @extend %reset-list;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $space-2;
+          }
+
+          li {
+            padding: $space-1 $space-5;
+            border-radius: $space-6;
+            background-color: $color-skill-bg;
+          }
         }
+      }
     }
+  }
 }

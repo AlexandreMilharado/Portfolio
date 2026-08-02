@@ -4,4 +4,10 @@
 @use '../abstracts' as *;
 
 .l-container {
+    padding: $space-15 $space-9;
+}
+
+.l-container-wide-right {
+    padding: $space-15 0;
+    padding-right: $space-9;
 }
