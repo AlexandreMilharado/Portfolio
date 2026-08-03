@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="scss/main.scss" />
   </head>
   <body>
-    <header id="home" class="header">
+    <header class="header">
       <nav class="nav">
         <a href="#home" class="anim-underline">Alexandre Milharado</a>
         <ul class="nav__list">
@@ -23,7 +23,7 @@
             <a href="#background">Background</a>
           </li>
           <li class="nav__list__item anim-underline">
-            <a href="#cv">Get My CV</a>
+            <a href="media/CV.pdf" target="_blank">Get My CV</a>
           </li>
           <li class="nav__list__item anim-underline">
             <a href="#experience">Experience</a>
@@ -41,7 +41,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="home">
       <div class="hero-wrapper">
         <section class="hero l-container">
           <div class="hero__content">
@@ -226,21 +226,79 @@
           </div>
         </section>
       </div>
-      <section id="experience" class="l-section">
-        <div class="l-container">
-          <h2>Experience</h2>
-        </div>
-      </section>
-      <section id="projects" class="l-section">
-        <div class="l-container">
-          <h2>Projects</h2>
-        </div>
-      </section>
-      <section id="cv" class="l-section">
-        <div class="l-container">
-          <h2>Get My CV</h2>
-        </div>
-      </section>
+      <div class="experience-wrapper">
+        <div class="glass-layer glass-layer--1"></div>
+        <section id="experience" class="experience l-container-wide-right">
+          <div class="experience__content">
+            <h2 class="experience__content__title">Experience</h2>
+            <div class="experience__content__main">
+              <ul class="timeline">
+                <li class="timeline-item">
+                  <div class="experience__content__main__role">
+                    <span>Teaching Assistant</span>
+                    <span>2025 - PRESENT</span>
+                  </div>
+                  <p>ISCTE - University Institute of Lisbon</p>
+                  <span>
+                    Taught <b>Introduction to Programming</b> and
+                    <b>Concurrent and Parallel Programming</b>.<br />
+                    Evaluated <b>more than 30 student group projects</b> and
+                    graded <b>more than 500 exam questions</b>.</span
+                  >
+                </li>
+                <li class="timeline-item">
+                  <div class="experience__content__main__role">
+                    <span>Master's in Computer Engineering</span>
+                    <span>2024 - 2026</span>
+                  </div>
+                  <p>ISCTE - University Institute of Lisbon</p>
+                  <span>
+                    Ranked among the <b>top 10% of students</b> each academic
+                    year.<br />
+                    Led <b>2 Javascript workshops</b> for incoming students,
+                    providing hands-on coding experience.</span
+                  >
+                </li>
+                <li class="timeline-item">
+                  <div class="experience__content__main__role">
+                    <span>Software Engineer Intern</span>
+                    <span>SUMMER 2023</span>
+                  </div>
+                  <p>Bubble-go, Sword Group aquired company</p>
+                  <span>
+                    Developed an event management application, including it's
+                    design and implementation.<br />
+                    Fully designed and implemented <b>more than 5 screens</b> in
+                    <b>React Native</b>.<br />
+                    Built <b>10 server-side functionalities</b> for request
+                    processing using <b>NestJS</b> and <b>MongoDB</b>.</span
+                  >
+                </li>
+                <li class="timeline-item">
+                  <div class="experience__content__main__role">
+                    <span>Bachelor's in Computer Engineering</span>
+                    <span>2021 - 2024</span>
+                  </div>
+                  <p>ISCTE - University Institute of Lisbon</p>
+                  <span>
+                    Ranked among the <b>top 10% of students</b> each academic
+                    year.<br />
+                    Led <b>2 Javascript workshops</b> for incoming students,
+                    providing hands-on coding experience.<br />
+                    Elected <b>Member of the Pedagogical Council</b>,
+                    representing the Computer Engineering student body.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="projects" class="l-section">
+          <div class="l-container">
+            <h2>Projects</h2>
+          </div>
+        </section>
+      </div>
       <section id="contact" class="l-section">
         <div class="l-container">
           <h2>Contact</h2>

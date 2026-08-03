@@ -1,6 +1,40 @@
 // SCSS Base - Utilities
 // Reusable single-purpose helper classes (CUBE CSS Style)
 
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
+.timeline {
+  position: relative;
+  padding-left: $space-8;
+  top: $space-10;
 
+  /* the vertical line */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0.6rem;
+    top: 0.8rem;
+    bottom: 0.8rem;
+    width: 0.2rem;
+    background: #333;
+  }
+
+  &-item {
+    position: relative;
+
+    &:first-child::before {
+      animation: pulse 1.5s infinite;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc(0.6rem - $space-8 - 1.2rem);
+      top: 0.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+      background: #000;
+    }
+  }
+}

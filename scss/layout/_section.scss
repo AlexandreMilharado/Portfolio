@@ -6,7 +6,7 @@
 .hero-wrapper {
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.772) 0%, transparent 30%),
-    url(../../img/background.png);
+    url(../../media/img/background.png);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -144,6 +144,80 @@
             border-radius: $space-6;
             background-color: $color-skill-bg;
           }
+        }
+      }
+    }
+  }
+}
+
+.experience-wrapper {
+  position: relative;
+  background-image: url(../../media/img/background_1.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  .glass-layer {
+    position: absolute;
+    inset: 0;
+
+    &--1 {
+      backdrop-filter: blur($glass-blur-hard) saturate($glass-saturate);
+      mask-image: linear-gradient(to right, transparent 0%, black 70%);
+    }
+  }
+}
+
+.experience {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      font-size: $font-size-display;
+      line-height: $line-height-tight;
+      background-color: $glass-border;
+      box-shadow: $shadow-drop, $glass-inset-highlight, $glass-inset-shade;
+      max-height: fit-content;
+      padding: $space-2 $space-9;
+      padding-right: $space-7;
+      border-radius: 0 $space-3 $space-3 0;
+    }
+
+    &__main {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: $space-6;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        font-size: $font-size-sm;
+
+        p {
+          color: $color-text-muted;
+          padding-bottom: $space-1;
+        }
+
+        span {
+          line-height: $line-height-snug;
+        }
+      }
+
+      &__role {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        :first-child {
+          font-size: $font-size-3xl;
+          font-weight: $font-weight-bold;
+        }
+
+        :last-child {
+          font-weight: $font-weight-semibold;
         }
       }
     }
