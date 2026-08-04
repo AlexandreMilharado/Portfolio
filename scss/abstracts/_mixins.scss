@@ -2,12 +2,11 @@
 // Production-quality mixins for responsiveness, positioning, hover states, and layouts
 // Refactored to use modern Dart Sass map modules
 
-@use 'sass:map';
-@use 'sass:list';
-@use 'breakpoints' as *;
-@use 'spacing' as *;
-@use 'variables' as *;
-
+@use "sass:map";
+@use "sass:list";
+@use "breakpoints" as *;
+@use "spacing" as *;
+@use "variables" as *;
 
 @mixin glass(
   $extra-shadow: null,
@@ -26,5 +25,23 @@
     box-shadow: $extra-shadow, $glass-inset-highlight, $glass-inset-shade;
   } @else {
     box-shadow: $glass-inset-highlight, $glass-inset-shade;
+  }
+}
+
+@mixin blur-glass($image-path, $begin: 0%, $end: 70%) {
+  position: relative;
+  background-image: url($image-path);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  .glass-layer {
+    position: absolute;
+    inset: 0;
+
+    &--1 {
+      backdrop-filter: blur($glass-blur-hard) saturate($glass-saturate);
+      mask-image: linear-gradient(to right, transparent 0%, black 70%);
+    }
   }
 }
