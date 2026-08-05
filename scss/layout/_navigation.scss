@@ -1,37 +1,37 @@
 // SCSS Layout - Navigation
 // Navigation system layouts for mobile-first responsive header links
 
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .nav {
-    position: fixed;
-    top: $space-5;
-    width: calc(100% - $space-7 - $space-7);
-    margin-left: $space-7;
-    padding: $space-4-5 $space-8;
-    z-index: z(sticky);
+  position: fixed;
+  top: $space-5;
+  width: calc(100% - $space-7 - $space-7);
+  margin-left: $space-7;
+  padding: $space-4-5 $space-8;
+  z-index: z(sticky);
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-nav-bg;
+  font-size: $font-size-md;
+
+  @include glass($shadow-drop);
+
+  &__list {
+    @extend %reset-list;
     display: flex;
+    gap: $space-9;
     align-items: center;
-    justify-content: space-between;
-    background-color: $color-nav-bg;
-    font-size: $font-size-md;
+  }
 
-    @include glass($shadow-drop);
-
-    &__list {
-        @extend %reset-list;
-        display: flex;
-        gap: $space-9;
-        align-items: center;
-    }
-
-    &::after {
-        content: none;
-        font-weight: $font-weight-semibold;
-        visibility: hidden;
-        height: 0;
-        overflow: hidden;
-        display: block;
-    }
+  &::after {
+    content: none;
+    font-weight: $font-weight-semibold;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    display: block;
+  }
 }

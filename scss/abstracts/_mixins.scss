@@ -28,7 +28,14 @@
   }
 }
 
-@mixin blur-glass($image-path, $begin: 0%, $end: 70%) {
+@mixin blur-glass-image(
+  $image-path,
+  $side,
+  $begin-percentage,
+  $begin-color,
+  $end-percentage,
+  $end-color
+) {
   position: relative;
   background-image: url($image-path);
   background-size: cover;
@@ -41,7 +48,46 @@
 
     &--1 {
       backdrop-filter: blur($glass-blur-hard) saturate($glass-saturate);
-      mask-image: linear-gradient(to right, transparent 0%, black 70%);
+      mask-image: linear-gradient(
+        to $side,
+        $begin-color $begin-percentage,
+        $end-color $end-percentage
+      );
     }
   }
+}
+@mixin title-section {
+  font-size: $font-size-display;
+  line-height: $line-height-tight;
+  background-color: $glass-border;
+  box-shadow: $shadow-drop, $glass-inset-highlight, $glass-inset-shade;
+  max-height: fit-content;
+  padding: $space-2 $space-9;
+  padding-right: $space-7;
+  border-radius: 0 $space-3 $space-3 0;
+}
+
+@mixin flex-technical-skills {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  width: 50%;
+
+  ul {
+    @extend %reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+  }
+
+  li {
+    @include buble-skill;
+  }
+}
+
+@mixin buble-skill {
+  padding: $space-1 $space-3;
+  border-radius: $space-6;
+  background-color: $color-skill-bg;
+  box-shadow: $shadow-drop, $glass-inset-highlight, $glass-inset-shade;
 }

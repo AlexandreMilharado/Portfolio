@@ -1,14 +1,14 @@
 // SCSS Base - Base Styles
 // Global body and default typographic element styles
 
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
@@ -17,14 +17,13 @@ html {
 }
 
 body {
-	font-family: $font-family-primary;
-	font-weight: $font-weight-regular;
-	font-size: $font-size-md;
-	line-height: $line-height-relaxed;
-	color: $color-text;
-	box-sizing: border-box;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-md;
+  line-height: $line-height-relaxed;
+  color: $color-text;
+  box-sizing: border-box;
 }
-
 
 a {
   color: inherit;
