@@ -215,7 +215,7 @@ a {
 
 .hero-wrapper {
   position: relative;
-  background-image: url("../../assets/img/background.png");
+  background-image: url("assets/img/background.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -356,7 +356,7 @@ a {
 
 .experience-wrapper {
   position: relative;
-  background-image: url("../../assets/img/background_1.png");
+  background-image: url("assets/img/background_1.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
