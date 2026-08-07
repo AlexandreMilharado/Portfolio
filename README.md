@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my work and skills.
 
-🔗 **Live site:** [Temporary]
+🔗 **Live site:** [Alexandre Milharado](https://alexandremilharado.github.io/Portfolio)
 
 ## Tech Stack
 
