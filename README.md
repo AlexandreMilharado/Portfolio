@@ -30,6 +30,7 @@ scss/
 
 ```
 ├── index.html
+├── css/
 ├── scss/
 └── assets/
 └── README.md
