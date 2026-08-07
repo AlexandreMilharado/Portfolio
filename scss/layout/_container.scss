@@ -75,3 +75,47 @@
     }
   }
 }
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  min-height: $space-13;
+  display: flex;
+  align-items: center;
+
+  background-color: #eff2d9;
+  backdrop-filter: blur($glass-blur-hard) saturate($glass-saturate);
+  // optional fade-out edges so items don't hard-cut at the sides
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+
+  &__track {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+    gap: $space-9;
+
+    &:hover {
+      animation-play-state: paused; // nice UX touch, optional
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    margin: 0 $space-4; // spacing between logos
+    display: flex;
+    align-items: center;
+
+    img {
+      height: $space-10;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+}

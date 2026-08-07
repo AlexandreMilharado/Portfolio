@@ -44,6 +44,15 @@
   }
 }
 
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .anim-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
