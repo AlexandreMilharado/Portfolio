@@ -26,11 +26,6 @@ scss/
 └── main.scss    # Imports all of the above
 ```
 
-## Features
-
-- **Adblocker detection** — detects ad-blocking extensions, including Brave's built-in shields
-- **No-JS detection** — detects when JavaScript is disabled and shows a fallback message
-
 ## Project Structure
 
 ```

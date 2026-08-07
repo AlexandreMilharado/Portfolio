@@ -178,3 +178,61 @@
     }
   }
 }
+
+.projects {
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+  padding: $space-10;
+
+  &__message {
+    margin: 4rem auto;
+    text-align: center;
+
+    &-setup {
+      display: block;
+      font-family: $font-family-serif;
+      font-size: $font-size-xl;
+      font-style: italic;
+      font-weight: $font-weight-regular;
+      color: $color-primary-hover;
+      line-height: $line-height-normal;
+    }
+
+    &-divider {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 1rem 0;
+      color: $color-primary-hover;
+      text-transform: uppercase;
+
+      &::before,
+      &::after {
+        content: "";
+        flex: 1;
+        height: 0.5px;
+        background: $color-primary-hover;
+      }
+    }
+
+    &-punchline {
+      display: block;
+      font-family: $font-family-serif;
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-semibold;
+      color: $color-primary;
+      line-height: $line-height-tight;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: $space-12;
+  }
+}

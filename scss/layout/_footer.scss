@@ -1,8 +1,27 @@
 // SCSS Layout - Footer
 // Standard layout rules for footer container
 
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .footer {
+  padding: $space-6;
+  padding-top: $space-9;
+  background-color: $color-bg;
 
+  &__title {
+    font-size: $font-size-xl;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-text-muted;
+
+    &__links {
+      padding-right: $space-5;
+      display: flex;
+      gap: $space-7;
+    }
+  }
 }
