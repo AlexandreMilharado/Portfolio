@@ -5,9 +5,25 @@
 
 .l-container {
   padding: $space-15 $space-9;
+
+  @include mobile {
+    // Extra top clearance: the mobile nav stacks into 3 rows (~140px tall)
+    // instead of the desktop single row, and it's position: fixed so this
+    // padding is what keeps the hero heading from rendering under it.
+    padding: $space-14 $space-4-5 $space-9;
+  }
 }
 
 .l-container-wide-right {
   padding: $space-15 0;
   padding-right: $space-9;
+
+  @include mobile {
+    // Left stays 0 so each section's `__title` tab keeps bleeding flush to
+    // the screen edge, matching this container's desktop-first "wide-right"
+    // padding. The rest of each section's content insets itself from the
+    // left edge individually instead (see the `&__main` rules that use
+    // this container in layout/_section.scss).
+    padding: $space-9 $space-4-5 $space-9 0;
+  }
 }

@@ -8,8 +8,16 @@
   padding-top: $space-9;
   background-color: $color-bg;
 
+  @include mobile {
+    padding: $space-5 $space-4-5;
+  }
+
   &__title {
     font-size: $font-size-xl;
+
+    @include mobile {
+      font-size: $font-size-lg;
+    }
   }
 
   &__content {
@@ -18,10 +26,21 @@
     align-items: center;
     color: $color-text-muted;
 
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $space-3;
+    }
+
     &__links {
       padding-right: $space-5;
       display: flex;
       gap: $space-7;
+
+      @include mobile {
+        padding-right: 0;
+        gap: $space-5;
+      }
     }
   }
 }

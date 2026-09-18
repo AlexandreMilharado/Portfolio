@@ -8,6 +8,12 @@
 @use "spacing" as *;
 @use "variables" as *;
 
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
 @mixin glass(
   $extra-shadow: null,
   $bg: $glass-bg,
@@ -41,6 +47,17 @@
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+
+  // On mobile these wrappers stack tall (hero + background content in one
+  // flow), so a `cover` sized against the wrapper's own (very tall) box
+  // blows the image up far past its natural framing. Anchoring it to the
+  // viewport instead means `cover` is sized against the viewport height,
+  // not the wrapper, giving a natural zoom — and since a fixed background
+  // always spans the full viewport, it never runs out no matter how tall
+  // the wrapper's content is.
+  @include mobile {
+    background-attachment: fixed;
+  }
 
   .glass-layer {
     position: absolute;

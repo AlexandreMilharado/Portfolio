@@ -8,3 +8,10 @@
 //   'xl':  75rem,   // 1200px
 //   '2xl': 87.5rem  // 1400px
 // );
+
+// Small touch-screen cutoff (vertical aspect ratio). Kept in px rather than
+// rem: media query units resolve against the browser's default root font
+// size, not the html { font-size: 62.5% } override used for layout rem math.
+$breakpoint-mobile: 919px;
+
+

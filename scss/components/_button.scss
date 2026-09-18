@@ -23,6 +23,11 @@
 
     transition: background-color 0.2s ease, transform 0.15s ease;
 
+    @include mobile {
+        padding: $space-3 $space-5;
+        font-size: $font-size-sm;
+    }
+
     &:hover {
         background-color: $color-primary-hover;
         transform: translateY(-1px);
