@@ -205,6 +205,18 @@
     70%,
     black
   );
+
+  .glass-layer {
+    &--1 {
+      @include mobile {
+        mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.7) 0%,
+          black 70%
+        );
+      }
+    }
+  }
 }
 
 .experience {
@@ -219,6 +231,7 @@
 
     &__title {
       @include title-section;
+      z-index: z(default);
 
       @include mobile {
         align-self: flex-start;

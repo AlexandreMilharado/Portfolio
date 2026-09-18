@@ -511,6 +511,11 @@ a {
   backdrop-filter: blur(2rem) saturate(150%);
   mask-image: linear-gradient(to right, transparent 0%, black 70%);
 }
+@media (max-width: 919px) {
+  .experience-wrapper .glass-layer--1 {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, black 70%);
+  }
+}
 
 .experience__content {
   display: flex;
@@ -531,6 +536,7 @@ a {
   padding: 0.8rem 4.8rem;
   padding-right: 3.2rem;
   border-radius: 0 1.2rem 1.2rem 0;
+  z-index: 1;
 }
 @media (max-width: 919px) {
   .experience__content__title {
