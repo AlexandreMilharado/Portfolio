@@ -61,12 +61,12 @@
     padding: $space-3 $space-4;
     font-size: $font-size-sm;
 
-    & > a {
+    & > a:not(.btn) {
       align-self: center;
       font-weight: $font-weight-semibold;
     }
 
-    & > button {
+    & > .btn {
       width: 100%;
     }
   }

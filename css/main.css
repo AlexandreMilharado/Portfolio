@@ -18,8 +18,9 @@
   cursor: pointer;
   text-decoration: none;
 }
-.btn:focus {
-  outline: none;
+.btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
 }
 
 .card {
@@ -172,6 +173,16 @@ a {
   background-color: color-mix(in srgb, currentColor 20%, transparent);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 .l-container {
   padding: 22rem 4.8rem;
 }
@@ -248,18 +259,18 @@ a {
     padding: 1.2rem 1rem;
     font-size: 1.4rem;
   }
-  .nav > a {
+  .nav > a:not(.btn) {
     align-self: center;
     font-weight: 600;
   }
-  .nav > button {
+  .nav > .btn {
     width: 100%;
   }
 }
 
 .hero-wrapper {
   position: relative;
-  background-image: url("../assets/img/background.png");
+  background-image: url("../assets/img/background.webp");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -493,7 +504,7 @@ a {
 
 .experience-wrapper {
   position: relative;
-  background-image: url("../assets/img/background_1.png");
+  background-image: url("../assets/img/background_1.webp");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -645,6 +656,11 @@ a {
     padding-top: 2rem;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .projects__carousel {
+    overflow-x: auto;
+  }
+}
 .projects__carousel {
   mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
@@ -657,6 +673,9 @@ a {
   animation-delay: 3s;
   animation-fill-mode: backwards;
   transform: translateZ(0);
+}
+.projects__content:hover, .projects__content:focus-within {
+  animation-play-state: paused;
 }
 @media (max-width: 919px) {
   .projects__content {
@@ -743,6 +762,20 @@ a {
 .projects__content__item__body__actions {
   font-size: 1.2rem;
   width: 100%;
+}
+.projects__content__item__body__actions__link {
+  padding: 0.8rem 1.2rem;
+  border-radius: 6.4rem;
+  max-width: fit-content;
+  box-shadow: inset 0 0 0 1px #000000;
+  color: #000000;
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.projects__content__item__body__actions__link--soon {
+  opacity: 0.55;
+  cursor: default;
 }
 
 .contact {

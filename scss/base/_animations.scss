@@ -94,3 +94,16 @@
     background-color: color-mix(in srgb, currentColor 20%, transparent);
   }
 }
+
+// Respect users who ask the OS for less motion: stop the infinite
+// carousels/pulses and make entrance/hover animations effectively instant.
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -5,7 +5,7 @@
 
 .hero-wrapper {
   @include blur-glass-image(
-    "../assets/img/background.png",
+    "../assets/img/background.webp",
     left,
     30%,
     transparent,
@@ -198,7 +198,7 @@
 
 .experience-wrapper {
   @include blur-glass-image(
-    "../assets/img/background_1.png",
+    "../assets/img/background_1.webp",
     right,
     0%,
     transparent,
@@ -336,6 +336,11 @@
       padding-top: $space-5;
     }
 
+    // auto-scroll is disabled under reduced motion, so let users scroll manually
+    @media (prefers-reduced-motion: reduce) {
+      overflow-x: auto;
+    }
+
     // fade edges so cards don't hard-cut
     mask-image: linear-gradient(
       to right,
@@ -355,6 +360,11 @@
     animation-delay: 3s;
     animation-fill-mode: backwards;
     transform: translateZ(0);
+
+    &:hover,
+    &:focus-within {
+      animation-play-state: paused;
+    }
 
     @include mobile {
       gap: $space-4;
@@ -421,6 +431,18 @@
           @include flex-technical-skills;
           font-size: $font-size-xs;
           width: 100%;
+
+          &__link {
+            @include view-btn($color-primary);
+            margin-top: $space-2;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-medium;
+
+            &--soon {
+              opacity: 0.55;
+              cursor: default;
+            }
+          }
         }
       }
     }
