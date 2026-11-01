@@ -227,8 +227,12 @@ a {
 }
 @media (max-width: 919px) {
   .nav__list {
-    justify-content: center;
-    gap: 2rem;
+    grid-area: links;
+    justify-content: space-between;
+    gap: min(1.2rem, 2vw);
+    font-size: min(1.4rem, 3.6vw);
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -250,21 +254,28 @@ a {
 }
 @media (max-width: 919px) {
   .nav {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.8rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "brand contact" "links links";
+    align-items: center;
+    row-gap: 0.8rem;
+    column-gap: 1.2rem;
     top: 0.8rem;
     width: calc(100% - 1rem - 1rem);
     margin-left: 1rem;
-    padding: 1.2rem 1rem;
+    padding: 1.2rem 1.6rem;
+    border-radius: 2.4rem;
     font-size: 1.4rem;
   }
   .nav > a:not(.btn) {
-    align-self: center;
+    grid-area: brand;
+    justify-self: start;
     font-weight: 600;
   }
   .nav > .btn {
-    width: 100%;
+    grid-area: contact;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.2rem;
   }
 }
 

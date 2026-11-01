@@ -26,8 +26,15 @@
     align-items: center;
 
     @include mobile {
-      justify-content: center;
-      gap: $space-5;
+      grid-area: links;
+      // space-between falls back to flex-start on overflow, so narrow
+      // screens can still scroll to every link instead of clipping both ends
+      justify-content: space-between;
+      // shrink slightly on very narrow phones (~320px) so all links still fit
+      gap: min($space-3, 2vw);
+      font-size: min($font-size-sm, 3.6vw);
+      padding-top: $space-2;
+      border-top: 1px solid $color-border;
       overflow-x: auto;
       scrollbar-width: none;
 
@@ -52,22 +59,31 @@
   }
 
   @include mobile {
-    flex-direction: column;
-    align-items: stretch;
-    gap: $space-2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand contact"
+      "links links";
+    align-items: center;
+    row-gap: $space-2;
+    column-gap: $space-3;
     top: $space-2;
     width: calc(100% - $space-4 - $space-4);
     margin-left: $space-4;
-    padding: $space-3 $space-4;
+    padding: $space-3 $space-4-5;
+    border-radius: $space-6;
     font-size: $font-size-sm;
 
     & > a:not(.btn) {
-      align-self: center;
+      grid-area: brand;
+      justify-self: start; // keep the hover underline the width of the text
       font-weight: $font-weight-semibold;
     }
 
     & > .btn {
-      width: 100%;
+      grid-area: contact;
+      padding: $space-2 $space-4-5;
+      font-size: $font-size-xs;
     }
   }
 }
